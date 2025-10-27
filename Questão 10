@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h> 
+
+int main() {
+    int numLados;
+    float medidaLado = 0, area;
+
+    printf("Digite o numero de lados do poligono (3, 4 ou 5): ");
+    scanf("%d", &numLados);
+
+    if (numLados == 3) {
+        printf("Digite a medida do lado (em cm): ");
+        scanf("%f", &medidaLado);
+        
+        area = (medidaLado * medidaLado * sqrt(3)) / 4.0;
+        printf("\nTRIANGULO\n");
+        printf("Area: %.2f cm2\n", area);
+    }
+    else if (numLados == 4) {
+        printf("Digite a medida do lado (em cm): ");
+        scanf("%f", &medidaLado);
+        
+        area = medidaLado * medidaLado;
+        printf("\nQUADRADO\n");
+        printf("Area: %.2f cm2\n", area);
+    }
+    else if (numLados == 5) {
+        printf("\nPENTAGONO\n");
+    }
+    else {
+        printf("\nNumero de lados invalido para este exercicio.\n");
+    }
+
+    return 0;
+}
